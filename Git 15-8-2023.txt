@@ -1,0 +1,71 @@
+Описание задания Git od 15/8/2023
+
+ 1 уровень сложности: 1. Как скопировать на свой компьютер репозиторий из github.com, что должно быть сделано предварительно?
+нужно создать новый репозиторий
+
+Как создать git репозиторий из локального каталога на своем компьютере. Как его отправить на github.com?
+
+Как получить на локальный компьютер изменения с github.com
+
+Какую информацию нам дают команда :
+git status - говорит что это untracked file
+git log -смотрим изменения когда были сделаны
+git remote -v - к какому серверу связан репозиторий
+
+
+admin@DESKTOP-LEV5OV8 MINGW64 ~/OneDrive - České vysoké učení technické v Praze/Plocha/song_Kathiusha (master)
+$ git config --global -l
+user.email=neagu2010@gmail.com
+user.name=Tatiana.Neagu
+
+admin@DESKTOP-LEV5OV8 MINGW64 ~/OneDrive - České vysoké učení technické v Praze/Plocha/song_Kathiusha (master)
+$ ls -al
+total 28
+drwxr-xr-x 1 admin 197609 0 Aug 19 15:43 ./
+drwxr-xr-x 1 admin 197609 0 Aug 19 15:43 ../
+
+admin@DESKTOP-LEV5OV8 MINGW64 ~/OneDrive - České vysoké učení technické v Praze/Plocha/song_Kathiusha (master)
+$ echo "# song_Katiusha" >> README.md
+
+admin@DESKTOP-LEV5OV8 MINGW64 ~/OneDrive - České vysoké učení technické v Praze/Plocha/song_Kathiusha (master)
+$ git init
+Initialized empty Git repository in C:/Users/admin/OneDrive - České vysoké učení technické v Praze/Plocha/song_Kathiusha/.git/
+
+admin@DESKTOP-LEV5OV8 MINGW64 ~/OneDrive - České vysoké učení technické v Praze/Plocha/song_Kathiusha (master)
+$ git add README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+admin@DESKTOP-LEV5OV8 MINGW64 ~/OneDrive - České vysoké učení technické v Praze/Plocha/song_Kathiusha (master)
+$ ls -al
+total 37
+drwxr-xr-x 1 admin 197609  0 Aug 19 15:47 ./
+drwxr-xr-x 1 admin 197609  0 Aug 19 15:43 ../
+drwxr-xr-x 1 admin 197609  0 Aug 19 15:48 .git/
+-rw-r--r-- 1 admin 197609 16 Aug 19 15:47 README.md
+
+admin@DESKTOP-LEV5OV8 MINGW64 ~/OneDrive - České vysoké učení technické v Praze/Plocha/song_Kathiusha (master)
+$ git commit -m "add first commit song Katiusa"
+[master (root-commit) a40f753] add first commit song Katiusa
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+admin@DESKTOP-LEV5OV8 MINGW64 ~/OneDrive - České vysoké učení technické v Praze/Plocha/song_Kathiusha (master)
+$ git branch -M main
+
+admin@DESKTOP-LEV5OV8 MINGW64 ~/OneDrive - České vysoké učení technické v Praze/Plocha/song_Kathiusha (main)
+$ git remote add origin git@github.com:Neagu7777/song_Katiusha.git
+
+admin@DESKTOP-LEV5OV8 MINGW64 ~/OneDrive - České vysoké učení technické v Praze/Plocha/song_Kathiusha (main)
+$ git push -u origin main
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+admin@DESKTOP-LEV5OV8 MINGW64 ~/OneDrive - České vysoké učení technické v Praze/Plocha/song_Kathiusha (main)
+$
+
+
+ 
+
